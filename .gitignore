@@ -1,0 +1,4 @@
+data/*.parquet
+data/*.npy
+data/*.csv
+models/*.pkl
