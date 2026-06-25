@@ -19,8 +19,8 @@ scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
 print("\nScaling done!")
-print("Sample mean (should be ~0):", X_scaled.mean().round(4))
-print("Sample std (should be ~1):", X_scaled.std().round(4))
+print("Sample mean (should be 0):", X_scaled.mean().round(4))
+print("Sample std (should be 1):", X_scaled.std().round(4))
 
 # Split: 80% train, 20% test
 X_train, X_test, y_train, y_test = train_test_split(
@@ -38,5 +38,5 @@ np.save("../data/X_test.npy", X_test)
 np.save("../data/y_train.npy", y_train)
 np.save("../data/y_test.npy", y_test)
 
-print("\nAll splits saved to data/ folder!")
+print("\nAll splits saved to data folder!")
 print("Files: X_train.npy, X_test.npy, y_train.npy, y_test.npy")

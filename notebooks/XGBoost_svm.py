@@ -36,7 +36,7 @@ print("\nXGBoost model saved!")
 from sklearn.svm import SVC
 from sklearn.utils import resample
 
-print("\nTraining SVM... (may take 3-5 minutes)")
+print("\nTraining SVM...")
 
 # SVM on a sample (50,000 rows) — standard practice for large datasets
 X_train_sample, y_train_sample = resample(X_train, y_train, n_samples=50000, random_state=42)
@@ -51,7 +51,7 @@ print("rf model finished")
 y_pred_svm = svm_model.predict(X_test)
 
 # Results
-print("\n--- SVM Results ---")
+print("\n SVM Results :-")
 print("Accuracy:", round(accuracy_score(y_test, y_pred_svm) * 100, 2), "%")
 print("\nClassification Report:")
 print(classification_report(y_test, y_pred_svm, target_names=['Benign', 'DDoS']))

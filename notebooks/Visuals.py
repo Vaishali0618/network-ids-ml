@@ -4,11 +4,11 @@ import seaborn as sns
 from sklearn.metrics import confusion_matrix, accuracy_score
 import joblib
 
-# load my data
+# loading my data
 X_test = np.load("../data/X_test.npy")
 y_test = np.load("../data/y_test.npy")
 
-# load all 3 models
+# loading all 3 models
 model_rf = joblib.load("../models/random_forest.pkl")
 model_xgb = joblib.load("../models/xgboost.pkl")
 model_svm = joblib.load("../models/svm.pkl")

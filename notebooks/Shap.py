@@ -4,12 +4,12 @@ import shap
 import matplotlib.pyplot as plt
 import joblib
 
-# Load test data
+# Loading test data
 X_test = np.load("../data/X_test.npy")
 df = pd.read_csv("../data/cleaned_data.csv")
 feature_names = df.drop('Label', axis=1).columns.tolist()
 
-# Load Random Forest model
+# Loading Random Forest model
 rf_model = joblib.load("../models/random_forest.pkl")
 
 print("Calculating SHAP values... (may take 2-3 minutes)")
